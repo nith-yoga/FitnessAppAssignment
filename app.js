@@ -32,7 +32,7 @@ mongoose.connect('mongodb+srv://assignmentdbuser:Z2LJZNn2mjhYLLoq@cluster0.z7l9q
 
 // Defining the schemas and models
 const User = require("./database_schemas/User");
-const Workout = require("./database_schemas/workout");
+const Workout = require("./database_schemas/Workout");
 
 // Basic route for the homepage
 app.get('/', (_, res) => {
