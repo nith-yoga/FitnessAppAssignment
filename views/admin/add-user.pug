@@ -1,0 +1,25 @@
+extends ../layout.pug 
+
+block content
+        h1 Add User 
+        div
+        form(action="/admin/add-user" method="POST")
+            label(for="username") Username: 
+            input(type="text" name="username" required)
+            br
+            label(for="password") Password: 
+            input(type="password" name="password" required)
+            br
+            label(for="weight") Weight (kg):
+            input(type="number" name="weight")
+            br
+            label(for="squat") Max Squat (kg):
+            input(type="number" name="squat")
+            br
+            label(for="benchPress") Max Bench Press (kg):
+            input(type="number" name="benchPress")
+            br 
+            label(for="deadlift") Max Deadlift (kg):
+            input(type="number" name="deadlift")
+            br 
+            button(type="submit") Add User
