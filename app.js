@@ -36,7 +36,7 @@ const Workout = require("./database_schemas/Workout");
 
 // Basic route for the homepage
 app.get('/', (_, res) => {
-    res.send('Fitness App - Home');
+    res.render('admin/index');
 });
 
 // Route to render user form

@@ -1,6 +1,8 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Franklin Gothic Medium';
+    background-color: #e54141;
 }
 
 .container {
@@ -14,12 +16,19 @@ h1 {
     font-style: bold;
 }
 
+p {
+    text-align: center;
+    margin-top: 15%;
+    color:#570505;
+}
+
 form {
     padding: 15px;
 }
 
 label {
     display: block;
+    color: #ddcfcf;
 }
 
 button {
@@ -31,5 +40,59 @@ button {
 }
 
 button:hover {
-    background-color: #86aac0;
+    background-color: #c08686;
+}
+
+.navbar {
+    background-color:#e54141 !important;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 20px;
+    color:#570505;
+}
+
+.navbar-brand, .navbar-nav, .nav-link {
+    color: black !important;
+    font-family: 'Arial';
+}
+
+.navbar-nav .nav-item {
+    display: inline-block;
+}
+
+.navbar-nav .nav-link {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar-nav, .nav-link:hover {
+    color: white !important;
+}
+
+/* Making the dropdown items appear on hover instead of click */
+.navbar .dropdown {
+    position: relative;
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.navbar .dropdown-menu {
+    margin-top: 0;
+    border-radius: 0;
+    background-color: #e54141;
+    border: none;
+}
+
+.navbar .dropdown-item {
+    color: #570505;
+}
+
+.navbar .dropdown-item:hover {
+    background-color: #570505;
+    color: white;
 }
