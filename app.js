@@ -1,7 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const app = express();
 const port = 3000;
+
+// CORS Middleware
+app.use(cors({
+    origin: 'http://localhost:5173', // Replace with your React app's URL if deployed
+  }));
 
 app.set('view engine', 'pug');
 app.use(express.urlencoded({ extended: true }));
