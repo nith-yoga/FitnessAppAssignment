@@ -38,8 +38,8 @@ mongoose.connect('mongodb+srv://new-user2:ftZK1MdoqghYC8Qx@cluster0.z7l9q.mongod
 
 
 // Defining the schemas and models
-const User = require("./database_schemas/User");
-const Workout = require("./database_schemas/Workout");
+const User = require("./api/User");
+const Workout = require("./api/Workout");
 
 // Basic route for the homepage
 app.get('/', (_, res) => {
