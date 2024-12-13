@@ -7,6 +7,7 @@ const port = 3000;
 // CORS Middleware
 app.use(cors({
     origin: 'http://localhost:5173', // Replace with your React app's URL if deployed
+    methods: ['GET', 'POST'],
   }));
 
 app.set('view engine', 'pug');
@@ -14,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://assignmentdbuser:Z2LJZNn2mjhYLLoq@cluster0.z7l9q.mongodb.net/fitnessApp?retryWrites=true&w=majority&appName=Cluster0',)
+mongoose.connect('mongodb+srv://new-user2:ftZK1MdoqghYC8Qx@cluster0.z7l9q.mongodb.net/fitnessApp?retryWrites=true&w=majority&appName=Cluster0',)
 /* Console logging for debugging:
 .then(() => {
     console.log('Connected to MongoDB Atlas');
