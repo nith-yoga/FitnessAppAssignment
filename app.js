@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config();
 const cors = require('cors');
 const app = express();
 const port = 3000;
@@ -15,7 +16,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://new-user2:ftZK1MdoqghYC8Qx@cluster0.z7l9q.mongodb.net/fitnessApp?retryWrites=true&w=majority&appName=Cluster0',)
+const dbUser = process.env.DB_USER;
+const dbPass = process.env.DB_PASS;
+const dbAtlas = process.env.DB_ATLAS;
+
+const mongoURI = `mongodb+srv://${dbUser}:${dbPass}@${dbAtlas}`;
+
+mongoose.connect(mongoURI,);
 /* Console logging for debugging:
 .then(() => {
     console.log('Connected to MongoDB Atlas');
